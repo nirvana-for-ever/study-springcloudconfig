@@ -8,7 +8,6 @@ server:
   servlet:
     context-path: /
 
-# 数据源配置
 spring:
   profiles: dev
   datasource:
@@ -24,19 +23,16 @@ spring:
 
 eureka:
   instance:
-    hostname: localhost  #eureka客户端主机实例名称
-    appname: student-provider  #客户端服务名，在localhost:2001注册中心上显示的名字，自定义的，配置多个一样的provider的时候是一样的名字
-    instance-id: student-provider:1005 #客户端实例名称，同上，自定义的，配置多个一样的provider的时候是不同的名字
-    prefer-ip-address: true #显示IP
+    hostname: localhost
+    appname: student-provider
+    instance-id: student-provider:1005
+    prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://localhost:2004/eureka   #把服务注册到eureka注册中心
+      defaultZone: http://localhost:2004/eureka
 
-
-
-#配置actuator时的属性
 info:
-  groupId: @project.groupId@ #动态取值，从pom中读取
+  groupId: @project.groupId@
   artifactId: @project.artifactId@
   version: @project.version@
   name: zs
@@ -47,7 +43,6 @@ server:
   servlet:
     context-path: /
 
-# 数据源配置
 spring:
   profiles: test
   datasource:
@@ -63,18 +58,16 @@ spring:
 
 eureka:
   instance:
-    hostname: localhost  #eureka客户端主机实例名称
-    appname: student-provider  #客户端服务名，在localhost:2001注册中心上显示的名字，自定义的，配置多个一样的provider的时候是一样的名字
-    instance-id: student-provider:1004 #客户端实例名称，同上，自定义的，配置多个一样的provider的时候是不同的名字
-    prefer-ip-address: true #显示IP
+    hostname: localhost
+    appname: student-provider
+    instance-id: student-provider:1004
+    prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://localhost:2004/eureka   #把服务注册到eureka注册中心
+      defaultZone: http://localhost:2004/eureka
 
-
-#配置actuator时的属性
 info:
-  groupId: @project.groupId@ #动态取值，从pom中读取
+  groupId: @project.groupId@
   artifactId: @project.artifactId@
   version: @project.version@
   name: zs
