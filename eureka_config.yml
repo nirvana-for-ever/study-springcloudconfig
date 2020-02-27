@@ -1,7 +1,7 @@
-spring: 
+spring:
   profiles:
     active:
-    - dev
+      - dev
 ---
 server:
   port: 2004
@@ -13,10 +13,10 @@ eureka:
   instance:
     hostname: localhost
   client:
-    register-with-eureka: false     #false ÓÉÓÚ¸ÃÓ¦ÓÃÎª×¢²áÖĞĞÄ£¬ËùÒÔÉèÖÃÎªfalse,´ú±í²»Ïò×¢²áÖĞĞÄ×¢²á×Ô¼º¡£
-    fetch-registry: false     #false ÓÉÓÚ×¢²áÖĞĞÄµÄÖ°Ôğ¾ÍÊÇÎ¬»¤·şÎñÊµÀı£¬Ëü²¢²»ĞèÒªÈ¥¼ìË÷·şÎñ£¬ËùÒÔÒ²ÉèÖÃÎªfalse
+    register-with-eureka: false     #false ç”±äºè¯¥åº”ç”¨ä¸ºæ³¨å†Œä¸­å¿ƒï¼Œæ‰€ä»¥è®¾ç½®ä¸ºfalse,ä»£è¡¨ä¸å‘æ³¨å†Œä¸­å¿ƒæ³¨å†Œè‡ªå·±ã€‚
+    fetch-registry: false     #false ç”±äºæ³¨å†Œä¸­å¿ƒçš„èŒè´£å°±æ˜¯ç»´æŠ¤æœåŠ¡å®ä¾‹ï¼Œå®ƒå¹¶ä¸éœ€è¦å»æ£€ç´¢æœåŠ¡ï¼Œæ‰€ä»¥ä¹Ÿè®¾ç½®ä¸ºfalse
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/       #ÉèÖÃÓëEureka×¢²áÖĞĞÄ½»»¥µÄµØÖ·£¬²éÑ¯·şÎñºÍ×¢²á·şÎñÓÃµ½       #ÉèÖÃÓëEureka×¢²áÖĞĞÄ½»»¥µÄµØÖ·£¬²éÑ¯·şÎñºÍ×¢²á·şÎñÓÃµ½
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/       #è®¾ç½®ä¸Eurekaæ³¨å†Œä¸­å¿ƒäº¤äº’çš„åœ°å€ï¼ŒæŸ¥è¯¢æœåŠ¡å’Œæ³¨å†ŒæœåŠ¡ç”¨åˆ°       #è®¾ç½®ä¸Eurekaæ³¨å†Œä¸­å¿ƒäº¤äº’çš„åœ°å€ï¼ŒæŸ¥è¯¢æœåŠ¡å’Œæ³¨å†ŒæœåŠ¡ç”¨åˆ°
 ---
 server:
   port: 2004
@@ -28,7 +28,7 @@ eureka:
   instance:
     hostname: localhost
   client:
-    register-with-eureka: false     #false ÓÉÓÚ¸ÃÓ¦ÓÃÎª×¢²áÖĞĞÄ£¬ËùÒÔÉèÖÃÎªfalse,´ú±í²»Ïò×¢²áÖĞĞÄ×¢²á×Ô¼º¡£
-    fetch-registry: false     #false ÓÉÓÚ×¢²áÖĞĞÄµÄÖ°Ôğ¾ÍÊÇÎ¬»¤·şÎñÊµÀı£¬Ëü²¢²»ĞèÒªÈ¥¼ìË÷·şÎñ£¬ËùÒÔÒ²ÉèÖÃÎªfalse
+    register-with-eureka: false     #false ç”±äºè¯¥åº”ç”¨ä¸ºæ³¨å†Œä¸­å¿ƒï¼Œæ‰€ä»¥è®¾ç½®ä¸ºfalse,ä»£è¡¨ä¸å‘æ³¨å†Œä¸­å¿ƒæ³¨å†Œè‡ªå·±ã€‚
+    fetch-registry: false     #false ç”±äºæ³¨å†Œä¸­å¿ƒçš„èŒè´£å°±æ˜¯ç»´æŠ¤æœåŠ¡å®ä¾‹ï¼Œå®ƒå¹¶ä¸éœ€è¦å»æ£€ç´¢æœåŠ¡ï¼Œæ‰€ä»¥ä¹Ÿè®¾ç½®ä¸ºfalse
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/       #ÉèÖÃÓëEureka×¢²áÖĞĞÄ½»»¥µÄµØÖ·£¬²éÑ¯·şÎñºÍ×¢²á·şÎñÓÃµ½       #ÉèÖÃÓëEureka×¢²áÖĞĞÄ½»»¥µÄµØÖ·£¬²éÑ¯·şÎñºÍ×¢²á·şÎñÓÃµ½
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/       #è®¾ç½®ä¸Eurekaæ³¨å†Œä¸­å¿ƒäº¤äº’çš„åœ°å€ï¼ŒæŸ¥è¯¢æœåŠ¡å’Œæ³¨å†ŒæœåŠ¡ç”¨åˆ°       #è®¾ç½®ä¸Eurekaæ³¨å†Œä¸­å¿ƒäº¤äº’çš„åœ°å€ï¼ŒæŸ¥è¯¢æœåŠ¡å’Œæ³¨å†ŒæœåŠ¡ç”¨åˆ°
