@@ -32,9 +32,9 @@ eureka:
       defaultZone: http://localhost:2004/eureka
 
 info:
-  groupId: @project.groupId@
-  artifactId: @project.artifactId@
-  version: @project.version@
+  groupId: $project.groupId$
+  artifactId: $project.artifactId$
+  version: $project.version$
   name: zs
   tel: 110
 ---
@@ -67,8 +67,8 @@ eureka:
       defaultZone: http://localhost:2004/eureka
 
 info:
-  groupId: @project.groupId@
-  artifactId: @project.artifactId@
-  version: @project.version@
+  groupId: $project.groupId$
+  artifactId: $project.artifactId$
+  version: $project.version$
   name: zs
   tel: 110
