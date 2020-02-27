@@ -1,0 +1,81 @@
+spring: 
+  profiles:
+    active:
+    - dev
+---
+server:
+  port: 1005
+  servlet:
+    context-path: /
+  
+# 数据源配置
+spring:
+  profiles: dev
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///db_springcloud?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone = GMT
+    username: root
+    password: 595251308
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+     
+eureka:
+  instance:
+    hostname: localhost  #eureka客户端主机实例名称
+    appname: student-provider  #客户端服务名，在localhost:2001注册中心上显示的名字，自定义的，配置多个一样的provider的时候是一样的名字
+    instance-id: student-provider:1005 #客户端实例名称，同上，自定义的，配置多个一样的provider的时候是不同的名字
+    prefer-ip-address: true #显示IP
+  client:
+    service-url:
+      defaultZone: http://localhost:2004/eureka   #把服务注册到eureka注册中心
+
+
+
+#配置actuator时的属性
+info:
+  groupId: @project.groupId@ #动态取值，从pom中读取
+  artifactId: @project.artifactId@
+  version: @project.version@
+  name: 张三
+  tel: 110
+---
+server:
+  port: 1005
+  servlet:
+    context-path: /
+  
+# 数据源配置
+spring:
+  profiles: test
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///db_springcloud?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone = GMT
+    username: root
+    password: 595251308
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+     
+eureka:
+  instance:
+    hostname: localhost  #eureka客户端主机实例名称
+    appname: student-provider  #客户端服务名，在localhost:2001注册中心上显示的名字，自定义的，配置多个一样的provider的时候是一样的名字
+    instance-id: student-provider:1004 #客户端实例名称，同上，自定义的，配置多个一样的provider的时候是不同的名字
+    prefer-ip-address: true #显示IP
+  client:
+    service-url:
+      defaultZone: http://localhost:2004/eureka   #把服务注册到eureka注册中心
+
+
+#配置actuator时的属性
+info:
+  groupId: @project.groupId@ #动态取值，从pom中读取
+  artifactId: @project.artifactId@
+  version: @project.version@
+  name: 张三
+  tel: 110
